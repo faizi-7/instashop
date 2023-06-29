@@ -1,0 +1,65 @@
+.orderListContainer {
+    padding: 50px 100px;
+    @media screen and (max-width: 1200px) {
+        padding: 50px 50px;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 50px 20px;
+    }
+    .orderTableContainer {
+
+        background-color: #dde6ed;
+        border-radius: 10px;
+        padding: 20px;
+        h2 {
+          margin-bottom: 20px;
+          color: #222222;
+        }
+        width: 100%;
+        overflow-x: scroll;
+        .tableWrapper {
+          display: inline-block;
+          min-width: 100%;
+          box-sizing: border-box;
+          .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 6px;
+            overflow: hidden;
+            color: #222222;
+            th,
+            td {
+              padding: 8px;
+              text-align: left;
+            }
+            thead {
+              background-color: #f9f9f9;
+            }
+    
+            tbody tr:nth-child(even) {
+              background-color: white;
+            }
+            tbody tr {
+    
+                border-bottom: 3px solid transparent;
+            }
+    
+            tbody tr:hover {
+                background-color: rgb(34, 163, 159, .1);
+              border-bottom: 3px solid #22a39f;
+            }
+            button {
+                padding: 4px 8px;
+                border: none;
+                border-radius: 6px;
+                background-color: rgb(34, 163, 159, .8);
+                color: white;
+                cursor: pointer;
+                &:hover {
+                    background-color: #22a39f;
+                }
+            }
+          }
+        }
+    }
+  }

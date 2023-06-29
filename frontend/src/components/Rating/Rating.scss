@@ -1,0 +1,14 @@
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    .stars {
+        display: flex;
+        color: #F1C376;
+    
+    }
+    .numrating {
+        color: #5d5d5d;
+    }
+}

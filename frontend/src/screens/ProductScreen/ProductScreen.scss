@@ -1,0 +1,210 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 20px 80px;
+  @media screen and (max-width: 768px) {
+    margin: 20px 20px;
+  }
+  .back {
+    padding: 10px 20px;
+    @media screen and (max-width: 480px) {
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+    font-size: 20px;
+    color: #222222;
+    font-weight: 500;
+    background-color: #dcdcdc;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  .productDetail {
+    display: flex;
+    gap: 50px;
+    @media screen and (max-width: 768px) {
+      gap: 20px;
+      align-items: center;;
+    }
+    flex-wrap: wrap;
+    .left {
+      border-radius: 10px;
+      overflow: hidden;
+      max-width: 600px;
+      @media screen and (max-width: 1200px) {
+        max-width: 500px;
+      }
+      img {
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+      }
+    }
+    .right {
+      flex: 1;  
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 50px;
+      margin-bottom: 30px;
+      .itemUp {
+        .itemTitle {
+          font-size: 40px;
+          @media screen and (max-width: 480px) {
+            font-size: 30px;
+          }
+          font-weight: bold;
+          margin-bottom: 16px;
+        }
+        .itemDesc {
+          color: #5a5a5a;
+        }
+      }
+      .itemDown {
+        display: flex;
+        justify-content: flex-start;
+        gap: 30px;
+        align-items: center;
+
+        .leftD {
+          .price {
+            @media screen and (max-width: 480px) {
+              font-size: 22px;
+            }
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            span {
+              font-size: 16px;
+              color: #5a5a5a;
+            }
+          }
+          .status {
+            font-size: 12px;
+            padding: 5px 16px;
+            @media screen and (max-width: 480px) {
+              font-size: 10px;
+              padding: 4px 8px;
+            }
+            background-color: #5a5a5a;
+            border-radius: 100px;
+            font-weight: bolder;
+          }
+          .green {
+            background-color: #d0ffe4;
+            color: #00c053;
+          }
+          .red {
+            background-color: #ffebeb;
+            color: #ff5959;
+          }
+        }
+        .rightD {
+          display: flex;
+          gap: 20px;
+          select {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 70px;
+            &:hover,
+            &:focus {
+              border: 4px solid rgba(34, 163, 159, 0.5);
+              box-sizing: border-box;
+              outline: none;
+            }
+          }
+          button {
+            padding: 16px 30px;
+            @media screen and (max-width: 480px) {
+              padding: 8px 10px;
+              font-size: 16px;
+            }
+            background-color: #22a39f;
+            color: #ffffff;
+            text-align: center;
+            font-size: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  .productReview {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+    h1 {
+      @media screen and (max-width: 480px) {
+        font-size: 24px;
+      }
+    }
+    .reviewContent {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .singleReview {
+        background-color: #dde6ed;
+        padding: 20px 20px;
+        border-radius: 10px;
+        color: #222222;
+        p {
+          color: rgb(34, 34, 34, 0.7);
+        }
+      }
+      .reviewForm {
+        background-color: #dde6ed;
+        padding: 20px 20px;
+        border-radius: 10px;
+        h2 {
+          color: #222222;
+          font-size: 20px;
+          font-weight: 500;
+          margin-bottom: 20px;
+        }
+        form {
+          select,
+          textarea {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+
+          select {
+            height: 34px;
+          }
+
+          textarea {
+            resize: vertical;
+          }
+
+          button {
+            background-color: #22a39f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+
+          button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+}

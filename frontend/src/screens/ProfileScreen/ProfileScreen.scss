@@ -1,0 +1,125 @@
+.profileScreen {
+  display: flex;
+  padding: 50px 100px;
+  @media screen and (max-width: 1200px) {
+    padding: 50px 40px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 50px 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  gap: 20px;
+  align-items: flex-start;
+  .updateContainer {
+    flex: 3;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+    .loginForm {
+      border-radius: 10px;
+      background-color: #dde6ed;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .loginHeading {
+        font-size: 30px;
+        color: #222222;
+        font-weight: bold;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        input {
+          width: 100%;
+          padding: 8px 12px;
+          border: none;
+          border-radius: 6px;
+          &:focus {
+            outline: none;
+            border-bottom: 3px solid #4e4e4e;
+            border-radius: 6px 6px 0 0;
+          }
+        }
+        button {
+          padding: 8px 16px;
+          background-color: #22a39f;
+          border: none;
+          color: white;
+          border-radius: 6px;
+          cursor: pointer;
+          &:hover {
+            background-color: #1c8985;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+      span {
+        color: rgb(34, 34, 34, 0.7);
+        .link {
+          color: #222222;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .orderHistoryContainer {
+    flex: 8;
+    background-color: #dde6ed;
+    border-radius: 10px;
+    padding: 20px;
+    h2 {
+      margin-bottom: 20px;
+      color: #222222;
+    }
+    width: 100%;
+    overflow-x: scroll;
+    .tableWrapper {
+      display: inline-block;
+      min-width: 100%;
+      box-sizing: border-box;
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 6px;
+        overflow: hidden;
+        color: #222222;
+        th,
+        td {
+          padding: 8px;
+          text-align: left;
+        }
+        thead {
+          background-color: #f9f9f9;
+        }
+
+        tbody tr:nth-child(even) {
+          background-color: white;
+        }
+        tbody tr {
+
+            border-bottom: 3px solid transparent;
+        }
+
+        tbody tr:hover {
+            background-color: rgb(34, 163, 159, .1);
+          border-bottom: 3px solid #22a39f;
+        }
+        button {
+            padding: 4px 8px;
+            border: none;
+            border-radius: 6px;
+            background-color: rgb(34, 163, 159, .8);
+            color: white;
+            cursor: pointer;
+            &:hover {
+                background-color: #22a39f;
+            }
+        }
+      }
+    }
+  }
+}

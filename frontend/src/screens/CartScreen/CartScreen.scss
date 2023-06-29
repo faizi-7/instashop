@@ -1,0 +1,123 @@
+.cartScreen {
+    margin: 20px 80px;
+    @media screen and (max-width: 768px) {
+        margin: 20px;
+        flex-direction: column;
+        
+    }
+    gap: 40px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .cartItems {
+        flex: 6;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .heading {
+            font-size: 36px;
+            font-weight: bold;
+            color: #222222;
+        }
+        .cartItem {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 24px;
+            width: 100%;
+            .cartImage {
+                img {
+                    width: 160px;
+                    height: 140px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+            .cartTitle {
+
+                font-size: 20px;
+                a {
+                    color: #5a5a5a;
+                    text-decoration-color: #e7e7e7;
+                    &:hover {
+                        color: #222222;
+                    }
+
+                }
+            
+            }
+            .cartPrice {
+                font-size: 20px;
+            }
+            select {
+                padding: 4px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                width: 50px;
+                &:hover,
+                &:focus {
+                box-shadow: 0 0 0 3px rgba(34, 163, 159, 0.5);
+                box-sizing: border-box;
+                  outline: none;
+                }
+            }
+            button {
+                padding: 16px 16px;
+                border: none;
+                background-color: #22a39f;
+                color: white;
+                border-radius: 10px;
+                cursor: pointer;
+                &:hover {
+                    background-color: #1b8480;
+                    transition: background-color 0.5s ease; 
+                }
+            }
+        }
+    }
+    .cartCheckoutCard {
+        flex: 4;
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #EAEAEA;
+        border-radius: 10px;
+        .cardHeading {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222222;
+        }
+        .cardPrice {
+            font-size: 20px;
+            color: #5a5a5a;
+        }
+        .divider {
+            width: 100%;
+            height: 1px;
+            background-color: #c5c5c5;
+            margin-top: 5px; /* Adjust as needed */
+            margin-bottom: 5px; /* Adjust as needed */
+        }
+        button {
+            padding: 12px 16px;
+            border: none;
+            background-color: #22a39f;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            &:hover {
+                background-color: #1b8480;
+                transition: background-color 0.5s ease; 
+            } 
+        }
+        .disabled {
+            opacity: 0.5; /* Example style for disabled button */
+            cursor: not-allowed;
+        }
+    }
+}

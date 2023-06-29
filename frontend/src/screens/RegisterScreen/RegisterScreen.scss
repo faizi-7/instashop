@@ -1,0 +1,54 @@
+.registerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .loginForm {
+        background-color: #DDE6ED;
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .loginHeading {
+            font-size: 30px;
+            color: #222222;
+            font-weight: bold;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            input {
+                width: 300px;
+                padding: 8px 12px;
+                border: none;
+                &:focus {
+                    outline: none;
+                    border-bottom: 3px solid #4e4e4e;
+                }
+            }
+            button {
+                padding: 8px 16px;
+                background-color: #22A39F;
+                border: none;
+                color: white;
+                cursor: pointer;
+                &:hover {
+                    background-color: #1c8985;
+                    transition: all .3s ease;
+                }
+            }
+
+        }
+        span {
+            color: rgb(34, 34, 34, .7);
+            .link {
+                color: #222222;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
