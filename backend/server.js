@@ -11,7 +11,7 @@ import cookieParser from "cookie-parser";
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 import cors from "cors";
 
-const port = 8000;
+const port = 5000;
 
 connectDB(); //Connect to MongoDB
 
