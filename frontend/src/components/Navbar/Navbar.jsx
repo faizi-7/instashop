@@ -80,7 +80,7 @@ const Navbar = () => {
             <Link to="/login" style={{ textDecoration: "none" }}>
               <span className="user">
                 <FaUser />
-                Sign In
+                Login
               </span>
             </Link>
           )}
