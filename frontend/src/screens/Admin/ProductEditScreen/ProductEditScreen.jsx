@@ -62,7 +62,7 @@ const ProductEditScreen = () => {
       toast.error(result.error);
     } else {
       toast.success("Product updated successfully!");
-      navigate("/admin/productlist");
+      navigate("/");
     }
   };
   const uploadFileHandler = async (e) => {
