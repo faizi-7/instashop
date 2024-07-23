@@ -4,7 +4,7 @@ import './Footer.scss'
 const Footer = () => {
   return (
     <div className="footer">
-        <span>InstaShop &copy; 2023 | By Faiz Iqbal</span>
+        <span>Gadda Guru &copy; 2024 | By Faiz Iqbal</span>
     </div>
   )
 }
