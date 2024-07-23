@@ -72,7 +72,7 @@ const Navbar = () => {
                   Profile
                 </Link>
                 <div onClick={logoutHandler} className="logoutItem">
-                  Logout
+                  Your Profile
                 </div>
               </div>
             </div>

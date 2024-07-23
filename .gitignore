@@ -18,7 +18,7 @@ dist-ssr
 .idea
 .DS_Store
 .env
-.pem
+*.pem
 *.suo
 *.ntvs*
 *.njsproj
