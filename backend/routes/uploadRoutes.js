@@ -1,6 +1,15 @@
 import path from 'path';
 import express from 'express';
 import multer from 'multer';
+import { v2 as cloudinary } from 'cloudinary';
+import fs from 'fs';
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+  secure: true,
+});
 
 const router = express.Router();
 
@@ -36,14 +45,31 @@ const uploadSingleImage = upload.single('image');
 router.post('/', (req, res) => {
   uploadSingleImage(req, res, function (err) {
     if (err) {
-      res.status(400).send({ message: err.message });
+      return res.status(400).send({ message: err.message });
     }
-    const imagePath = `/${req.file.path.replace(/\\/g, '/')}`;
 
-    res.status(200).send({
-      message: 'Image uploaded successfully',
-      image: imagePath,
-    });
+    if (!req.file) {
+      return res.status(400).send({ message: 'No file uploaded!' });
+    }
+
+    const imagePath = path.resolve(req.file.path);
+
+    cloudinary.uploader.upload(imagePath, { folder: 'uploads' })
+      .then(result => {
+        res.status(200).send({
+          message: 'Image uploaded successfully',
+          image: result.secure_url,
+        });
+
+        fs.unlink(imagePath, (err) => {
+          if (err) console.error('Failed to delete local file:', err);
+          else console.log('Local file deleted:', imagePath);
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(400).send({ message: err.message });
+      });
   });
 });
 
