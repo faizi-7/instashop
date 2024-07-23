@@ -22,7 +22,7 @@ const HomeScreen = () => {
         </Message>
       ) : (
         <div className="home">
-          <div className="heading">Our Products</div>
+          <div className="heading">Catalog of Products</div>git
           <div className="products">
             {data.products.map((product) => {
               return <Product key={product._id} product={product} />;
